@@ -1,7 +1,8 @@
 
-
 void pinSetupShutters();
 
 void timmershutterState(unsigned long &_timmershutters);
 
-void moveShutter(int shutter, enum shutter_directions _direction);
+bool checkShuttersState(volatile bool _AnalogState[], volatile bool _AnalogOldState[], bool _newstates[]);
+
+void moveShutter(int _shutter, enum shutter_direction dir);
